@@ -2,6 +2,10 @@
 
 Vmail is a Vim interface to Gmail.
 
+This branch is to add support for GPG within Vmail. Current functionality includes:
+
+* automatically decrypt PGP encrypted messages when viewing them;
+
 [screenshots]
 
 Why Vmail? Because some people are 1000 times more productive and happy in [Vim][vim]
@@ -32,6 +36,14 @@ If you want to use `elinks` to display HTML parts, [here are instructions][elink
 [elinks-tip]:https://github.com/danchoi/vmail/wiki/How-to-use-elinks-to-display-html-parts-of-emails
 
 ## Installation
+
+The details below will install Vmail from RubyGems. For compatibility, at the
+moment this branch does not support this. You should instead clone this git repository
+and
+
+    sudo rake install:local
+
+to install an updated version of vmail from here. Original instructions are below.
 
     gem install vmail
 

@@ -30,7 +30,8 @@ module Vmail
       res = retry_if_needed { fetch_and_cache(message_id) }
       log "Showing message message_id: #{message_id}"
       @cur_message_id = message_id
-      res
+# Call the view processor before returning to vim, to do any decryption
+      ViewProcessor.process(res)
     end
 
     def fetch_and_cache(message_id)
